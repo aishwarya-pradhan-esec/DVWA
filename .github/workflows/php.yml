@@ -19,6 +19,15 @@ jobs:
     
     - name: Docker Print Hello, World
       uses: yk14sec/helloworld-actions@v1.3
+    
+    - name: Prisma Cloud image scan
+      id: scan
+      uses: PaloAltoNetworks/prisma-cloud-scan@v1
+      with:
+        pcc_console_url: https://us-east1.cloud.twistlock.com/us-2-158343306
+        pcc_user: cc418e9e-5c5d-4bea-a881-f43939afdb42
+        pcc_pass: BdrVK2fN8JGv3PfOuEsosKDPOt8=
+        image_name: python:3.9-alpine
 
 
 #     - name: Validate composer.json and composer.lock
